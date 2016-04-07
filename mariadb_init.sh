@@ -4,10 +4,10 @@
 
 mysqladmin --silent --wait=30 ping
 
-mysql -uroot -e "CREATE USER 'database'@'%' IDENTIFIED BY 'secret'"
-mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'database'@'%' WITH GRANT OPTION"
+mysql -uroot -e "CREATE USER 'user'@'%' IDENTIFIED BY 'secret'"
+mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' WITH GRANT OPTION"
 mysql -uroot -e "FLUSH PRIVILEGES"
-mysql -uroot -e "CREATE SCHEMA database"
+mysql -uroot -e "CREATE SCHEMA db"
 
 echo "=> Done!"
 
